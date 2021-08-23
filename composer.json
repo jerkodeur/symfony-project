@@ -1,0 +1,16 @@
+{
+  "name": "jerkoder/symfony-project",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "authors": [
+    {
+      "name": "jerkoLegion",
+      "email": "jerome.potie@gmail.com"
+    }
+  ],
+  "scripts": {
+    "tests": "vendor/bin/phpunit tests --color"
+  }
+}
