@@ -12,5 +12,8 @@
   ],
   "scripts": {
     "tests": "vendor/bin/phpunit tests --color"
+  },
+  "require": {
+    "symfony/http-foundation": "^5.3"
   }
 }

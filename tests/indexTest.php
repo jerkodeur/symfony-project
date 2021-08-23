@@ -5,11 +5,6 @@ use PHPUnit\Framework\TestCase;
 
 class indexTest extends TestCase
 {
-    /**
-     * @runInSeparateProcess
-     * @throws ExpectationFailedException
-     * @throws InvalidArgumentException
-     */
     public function testHello()
     {
         // Simulate url parameter
