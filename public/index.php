@@ -17,13 +17,13 @@ $context = new RequestContext();
 $context->fromRequest($request);
 
 $urlMatcher = new UrlMatcher($routes, $context);
-
 try {
-    extract($urlMatcher->match($request->getPathInfo()));
+    $resultat = $urlMatcher->match($request->getPathInfo());
+    $request->attributes->add($resultat);
 
-    ob_start();
-    include __DIR__ . '/../src/pages/' . $_route . '.php';
-    $response = new Response(ob_get_clean());
+    [$className, $methodName] = explode('@', $resultat['_controler']);
+
+    $response = call_user_func([new $className, $methodName], $request);
 } catch (ResourceNotFoundException $e) {
     $response = new Response('La page recherchée n\'a pas été trouvée !', 404);
 } catch (Exception $e) {

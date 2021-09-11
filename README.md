@@ -18,7 +18,7 @@ This in order to better understand how a Framework works, and to discover what i
 - Performing unit tests with phpunit
 - [Using http-foundation to handle requests more easily](https://github.com/jerkodeur/symfony-project/wiki/Protocole-HTTP#utilisation-du-composant-symfony-httpfoundation)
 - [Implement 'front controller' design pattern](https://github.com/jerkodeur/symfony-project/wiki/Front-Controller)
-- [Manage the routing of our framework](https://github.com/jerkodeur/symfony-project/wiki/Routing)
+- [Optimize the routing of our framework](https://github.com/jerkodeur/symfony-project/wiki/Routing)
 
 ### Security
 - Protect data from XSS attacks with htmlspecialchars.
