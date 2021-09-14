@@ -8,23 +8,20 @@ use Symfony\Component\HttpFoundation\Response;
 class GreetingController
 {
 
-    public function hello(Request $request): Response
+    public function hello(string $name, string $_route): Response
     {
-        $name = $request->attributes->get('name');
-        $route = $request->attributes->get('_route');
         ob_start();
 
-        include __DIR__ . '/../pages/' . $route . '.php';
+        include __DIR__ . '/../pages/' . $_route . '.php';
 
         return new Response(ob_get_clean());
     }
 
-    public function bye(Request $request): Response
+    public function bye(string $_route): Response
     {
-        $route = $request->attributes->get('_route');
         ob_start();
 
-        include __DIR__ . '/../pages/' . $route . '.php';
+        include __DIR__ . '/../pages/' . $_route . '.php';
 
         return new Response(ob_get_clean());
     }

@@ -7,12 +7,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PageController
 {
-    public function about(Request $request): Response
+    public function about(string $_route): Response
     {
-        $route = $request->attributes->get('_route');
 
         ob_start();
-        include __DIR__ . '/../pages/' . $route . '.php';
+        include __DIR__ . '/../pages/' . $_route . '.php';
 
         return new Response(ob_get_clean());
     }
